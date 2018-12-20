@@ -1,0 +1,20 @@
+<PARENT>null</S>
+	
+	<type>0</B>
+    	<imageColor>255,255,255,255</S>
+
+<CHILD_LABEL>M</S>
+
+	<type>1</B>
+    	<alignX>1</B>
+    	<alignY>1</B>
+	<xIndex>1</B>
+	<xSpaces>3</B>
+	<yIndex>0</B>
+	<ySpaces>0</B>
+    	<offsetX>0</W>
+    	<offsetY>240</W>
+    	<fontResourceId>2</B>
+    	<fontScaleFactor>100</B>
+	<fontColor>127,127,127,192</S>
+	<hoverId>-1</W>

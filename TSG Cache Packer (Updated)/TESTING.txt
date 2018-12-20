@@ -1,0 +1,103 @@
+	     /*
+	     * Readable - Header Size (65535) MAX.
+	     */
+		cache_size = 2;
+		
+	     /*
+	     * Header Lengths -> Each Content Type.
+	     */
+		content_size = new byte[2]; //Fonts, Interfaces.
+		content_size[0] = (byte)fonts.length;
+		content_size[1] = (byte)interfaces.length;
+
+		int total_interfaces = 0;
+		for (File[] f : interfaces) {
+			total_interfaces += f.length - 1;
+		}
+
+	     /*
+	     * Total Cotent Positions & Required Length Writes.
+	     */		
+		int total_files = 0;
+		for (int cs : content_size) 
+		{
+			cache_size += 4;	
+			total_files += cs;
+		}
+
+		content_base_positions = new int[total_files];
+		
+		content_lengths = new int[
+			content_size[0] * 2 +
+			total_interfaces
+		];
+
+		fileStreams = new FileBuilder[content_lengths.length];
+
+	     /*
+	     * Stores Font Data.
+	     */			
+		int start_index = 0;
+		int pos_idx = 0;
+
+		for (File file : fonts)
+		{
+			content_base_positions[pos_idx] = cache_size;
+
+			cache_size += 4;
+			cache_size += content_lengths[start_index];
+
+			fileStreams[start_index] = FileBuilder.read(file);
+			content_lengths[start_index] = fileStreams[start_index].capacity();
+
+			++start_index;
+
+			content_base_positions[pos_idx] = cache_size;
+
+			cache_size += 4;
+			cache_size += content_lengths[start_index];			
+
+			fileStreams[start_index] = getFontStream(file);
+			content_lengths[start_index] = fileStreams[start_index].capacity();
+			
+			++start_index;
+			++pos_idx;
+		}
+
+	     /*
+	     * Stores Interface Data.
+	     */	
+		/*
+		for (File[] files : interfaces)
+		{
+			content_base_positions[pos_idx] = cache_size;
+			FileParser parse = new FileParser(files[0]);
+			FileAttribute attribute;
+
+			while ((attribute = parse.poll()) != null)
+			{
+				if (attribute.type() == 'S' && attribute.name()[0] == 'P')
+				{
+					File parent = getFileFromList(files, (String)attribute.element());
+				} else if (attribute.type() == 'S' && attribute.name()[0] == 'C') {
+					switch (attribute.name()[6] == '0')
+					{
+						children[++current] = getFileFromList(files, (String)attribute.element());
+					}
+				}
+			}
+		}*/
+
+			/*int children_count = files.length - 2;
+			try {
+				FileParser parse = new FileParser(files[0]);
+				FileAttribute attribute;
+
+				while ((attribute = parse.poll()) != null)
+				{
+					System.out.println(attribute);
+				}
+			} catch (IOException ioe) {
+				ioe.printStackTrace();
+			}*/
+		debug();

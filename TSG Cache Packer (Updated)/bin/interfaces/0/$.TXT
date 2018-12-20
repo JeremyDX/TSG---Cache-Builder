@@ -1,0 +1,81 @@
+<PARENT>null</S>
+	
+	<type>0</B>
+    	<imageColor>0,0,0,255</S>
+
+<CHILD_IMAGE>1.PNG</S>
+
+	<type>0</B>
+    	<alignX>1</B>
+    	<alignY>1</B>
+	<xIndex>0</B>
+	<xSpaces>0</B>
+	<yIndex>0</B>
+	<ySpaces>0</B>
+    	<offsetX>0</W>
+    	<offsetY>35</W>
+    	<imageColor>255,255,255,255</S>
+	<hoverId>-1</W>
+
+
+<CHILD_IMAGE>2.PNG</S>
+
+	<type>0</B>
+    	<alignX>1</B>
+    	<alignY>1</B>
+	<xIndex>0</B>
+	<xSpaces>0</B>
+	<yIndex>0</B>
+	<ySpaces>0</B>
+    	<offsetX>0</W>
+    	<offsetY>115</W>
+    	<imageColor>255,255,255,255</S>
+	<hoverId>-1</W>
+
+<CHILD_LABEL>Press @ To Play!</S>
+
+	<type>1</B>
+    	<alignX>1</B>
+    	<alignY>1</B>
+	<xIndex>0</B>
+	<xSpaces>0</B>
+	<yIndex>0</B>
+	<ySpaces>0</B>
+    	<offsetX>0</W>
+    	<offsetY>75</W>
+    	<fontResourceId>0</B>
+    	<fontScaleFactor>100</B>
+    	<fontColor>255,255,255,255</S>
+	<hoverId>-1</W>
+
+<CHILD_LABEL>The Survival</S>
+
+	<type>1</B>
+    	<alignX>1</B>
+    	<alignY>0</B>
+	<xIndex>0</B>
+	<xSpaces>0</B>
+	<yIndex>0</B>
+	<ySpaces>0</B>
+    	<offsetX>0</W>
+    	<offsetY>150</W>
+    	<fontResourceId>1</B>
+    	<fontScaleFactor>100</B>
+    	<fontColor>255,255,255,255</S>
+	<hoverId>-1</W>
+
+<CHILD_LABEL>\Game</S>
+
+	<type>1</B>
+    	<alignX>1</B>
+    	<alignY>0</B>
+	<xIndex>0</B>
+	<xSpaces>0</B>
+	<yIndex>0</B>
+	<ySpaces>0</B>
+    	<offsetX>0</W>
+    	<offsetY>150</W>
+    	<fontResourceId>1</B>
+    	<fontScaleFactor>100</B>
+    	<fontColor>255,255,255,255</S>
+	<hoverId>-1</W>
